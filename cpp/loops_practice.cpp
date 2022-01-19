@@ -110,6 +110,37 @@ int main()
             }
         }
     }
-
+    cout<<endl;
+    
+    // prime numbers - 2 factors - 1 and n 
+    
+    int n = 7;  // 1 and n divide 
+    
+    //check - 2 to n-1 
+    //atleast 1 number k n%k == 0 -> composite. 
+    //no number k such that n%k == 0 -> prime
+    
+    bool isPrime = true;  //bool  -> true, false
+    
+    for(int i=2;i<n;i++)
+    {
+        if(n%i == 0)
+        {
+            isPrime = false;
+            break;
+        }
+    }
+    
+    
+    if(isPrime == true)
+    {
+        cout<<n<<" is Prime"<<endl;
+    }
+    else
+    {
+        cout<<n<<" is not a prime"<<endl;
+    }
+    cout<<endl;
+    
     return 0;
 }
